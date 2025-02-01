@@ -5,9 +5,11 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>  <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+        <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
         <link rel="stylesheet" href="css/style.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     </head>
     <body data-bs-spy="scroll" data-bs-target="#myNavbar">
 
@@ -36,7 +38,7 @@
             <div class="heading">
                 <h1>Hello, c'est moi Seydi</h1>
                 <h3>Développeur Web Full Stack Spring boot & Angular</h3>
-                <a href="docs/CvPro.pdf" class="button1">Télécharger CV</a>
+                <a href="docs/CvPro.pdf" target="_blank" class="button1">Télécharger CV</a>
             </div> 
         </section>
 
@@ -131,8 +133,8 @@
                         <div class="timeline-panel-container">
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h3>Companie PERSO</h3>
-                                    <h4>Développeur Applicaton Web FullStack </h4>
+                                    <h3>VgiTech</h3>
+                                    <h4>Développeur Applicaton Web & Mobile FullStack </h4>
                                     <p class="text-muted"><span class="bi-clock-fill"></span> 2024</p>
                                 </div>
                                 <div class="timeline-body">
@@ -177,56 +179,108 @@
                         </div>
                     </div>
                 </div>
+            </div>
         </section>
 
-        <section id="portfolio">
-            <div class="container">
-                <div class="divider white"></div>
-                <div class="heading">
-                    <h2>Portfolio</h2>
-                </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <a href="https://facebook.com" target="_blank">
-                            <img src="images/1.png" class="img-thumbnail" alt="gestion rondes ">
-                        </a>
-                    </div>
-                    <div class="col-md-4">
-                        <a href="https://seydi-dev.github.io/pendu/" target="_blank">
-                            <img src="images/pendu.png" class="img-thumbnail" alt="pendu">
-                        </a>
-                    </div>
-                    <div class="col-md-4">
-                        <a href="https://seydi-dev.github.io/serpent/" target="_blank">
-                            <img src="images/serpent.png" class="img-thumbnail" alt="serpent">
-                        </a>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <a href="https://youtube.com" target="_blank">
-                            <img src="images/youtube.png" class="img-thumbnail" alt="youtube">
-                        </a>
-                    </div>
-                    <div class="col-md-4">
-                        <a href="https://twitter.com" target="_blank">
-                            <img src="images/twitter_retweet.png" class="img-thumbnail" alt="twitter retweet">
-                        </a>
-                    </div>
-                    <div class="col-md-4">
-                        <a href="https://facebook.com" target="_blank">
-                            <img src="images/facebook_video.png" class="img-thumbnail" alt="facebook video">
-                        </a>
-                    </div>
-                </div>
-            </div>
 
+        <!--Portfolio Section-->
+        <section class="portfolio">
+           <div class="container">
+               <div class="divider white"></div>
+               <div class="heading">
+                   <h2>Portfolio</h2>
+               </div>
+               <div class="portfolio-container">
+                   <div class="portfolio-box">
+                       <div class="portfolio-detail active">
+                           <p class="numb">01</p>
+                           <h3>Projet frelance</h3>
+                           <p>Développé une application full Stack web et mobile de gestion de ronde de sécurité avec
+                               scan de puces NFC pour une agence de sécurité
+                               application mobile avec partie admin(pour creer des puces) et agents (pour effectuer de
+                               s rondes) et une partie web pour la gestion des données et des rapports. J’ai travaillé sur
+                                la conception de l’architecture, le développement de l’API REST, la gestion des bases de données,
+                                l’implémentation de l’authentification et l’autorisation, et l’intégration de l’interface utilisateur
+                                avec Angular.
+                            </p>
+                           <div class="tech">
+                               <p>SPRING BOOT, ANGULAR,ANDROID </p>
+                           </div>
+                           <div class="github">
+                               <a href="#" target="_blank"><i class='bx bxl-github' ></i><span>Github Repository</span></a>
+                           </div>
+                       </div>
+                       <div class="portfolio-detail">
+                           <p class="numb">02</p>
+                           <h3>Jeu de pendu </h3>
+                           <p>Un jeu interactif en JavaScript où les joueurs doivent deviner un mot en un nombre limité d’essais. Doté d’une interface fluide et responsive,
+                               il propose plusieurs catégories de mots et un design attrayant..</p>
+                           <div class="tech">
+                               <p>JAVASCRIPT</p>
+                           </div>
+                           <div class="github">
+                               <a href="https://github.com/seydi-dev/pendu" target="_blank"><i class='bx bxl-github' ></i><span>Github Repository</span></a>
+                               <a href="https://seydi-dev.github.io/pendu/">Jouer</a>
+                           </div>
+                       </div>
+                       <div class="portfolio-detail">
+                           <p class="numb">03</p>
+                           <h3>Jeu de Serpent</h3>
+                           <p>Une version moderne du jeu classique Snake, développée en HTML, CSS et JavaScript.
+                               Le joueur contrôle un serpent qui grandit à chaque pomme mangée, tout en évitant de se
+                               heurter aux murs ou à lui-même.</p>
+                           <div class="tech">
+                               <p>JAVASCRIPT</p>
+                           </div>
+                           <div class="github">
+                               <a href="https://github.com/seydi-dev/serpent"><i class='bx bxl-github' ></i><span>Github Repository</span></a>
+                               <a href="https://seydi-dev.github.io/serpent/">Jouer</a>
+                           </div>
+                       </div>
+                       <div class="portfolio-detail">
+                           <p class="numb">04</p>
+                           <h3>Personal Project</h3>
+                           <p></p>
+                           <div class="tech">
+                               <p></p>
+                           </div>
+                           <div class="github">
+                               <a href="#"><i class='bx bxl-github' ></i><span>Github Repository</span></a>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="portfolio-box">
+                       <!--image box-->
+                       <div class="portfolio-carousel">
+                           <div class="img-slide">
+                               <div class="img-item">
+                                   <img src="images/1.png">
+                               </div>
+                               <div class="img-item">
+                                   <img src="images/pendu.png">
+                               </div>
+                               <div class="img-item">
+                                   <img src="images/serpent.png">
+                               </div>
+                               <div class="img-item">
+                                   <img src="images/8.png">
+                               </div>
+
+                           </div>
+                       </div>
+                       <div class="navigation">
+                           <button class="arrow-left disabled"><i class='bx bxs-chevron-left' ></i></button>
+                           <button class="arrow-right"><i class='bx bx-chevron-right' ></i></button>
+                       </div>
+                   </div>
+               </div>
+           </div>
         </section>
 
         <footer class="text-center">
             <a href="#about"><span class="bi-chevron-up"></span></a>
             <h5>© APPRENDRE-A-CODER.COM</h5>
         </footer>
-      
+        <script src="script.js"></script>
     </body>
 </html>
