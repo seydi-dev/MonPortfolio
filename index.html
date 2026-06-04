@@ -3,419 +3,397 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>CV — Seydi Ahmeth Ndiaye</title>
+    <title>Seydi Ahmeth Ndiaye — Développeur Full Stack</title>
 
-    <!-- Bootstrap -->
-    <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
-            crossorigin="anonymous"
-    />
-    <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
-            crossorigin="anonymous"
-            defer
-    ></script>
-
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-
-    <!-- Font -->
+    <!-- Google Fonts: Plus Jakarta Sans (display) + DM Sans (body) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-            rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css" />
 </head>
 
-<body data-bs-spy="scroll" data-bs-target="#myNavbar" data-bs-offset="80" tabindex="0">
-<!-- NAVBAR -->
-<nav id="myNavbar" class="navbar navbar-expand-lg navbar-dark sticky-top">
-    <div class="container">
-        <a class="navbar-brand fw-bold" href="#about">Seydi</a>
+<body>
 
-        <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-        >
-            <span class="navbar-toggler-icon"></span>
+<!-- ============================================================ NAVBAR -->
+<nav id="navbar">
+    <div class="nav-inner">
+        <a class="nav-brand" href="#about">SN</a>
+        <button class="nav-burger" id="navBurger" aria-label="Menu">
+            <span></span><span></span><span></span>
         </button>
-
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav ms-auto">
-                <a class="nav-link active" aria-current="page" href="#about">Profil</a>
-                <a class="nav-link" href="#skills">Compétences</a>
-                <a class="nav-link" href="#experience">Expérience</a>
-                <a class="nav-link" href="#education">Éducation</a>
-                <a class="nav-link" href="#certifications">Certifications</a>
-                <a class="nav-link" href="#portfolio">Projets</a>
-            </div>
+        <div class="nav-links" id="navLinks">
+            <a href="#about">Profil</a>
+            <a href="#skills">Compétences</a>
+            <a href="#experience">Expérience</a>
+            <a href="#education">Formation</a>
+            <a href="#certifications">Certifications</a>
+            <a href="#portfolio">Projets</a>
         </div>
     </div>
 </nav>
 
-<!-- HERO -->
-<section id="about" class="container section">
-    <div class="hero">
-        <div class="hero-left">
-            <div class="profile-picture">
-                <img src="images/me.jpeg" alt="Seydi Ahmeth Ndiaye" class="rounded-circle" />
+<!-- ============================================================ HERO -->
+<section id="about" class="section hero-section">
+    <div class="container hero-grid">
+
+        <div class="hero-photo-wrap">
+            <div class="hero-photo-ring">
+                <img src="images/me.jpeg" alt="Seydi Ahmeth Ndiaye" class="hero-photo" />
+            </div>
+            <div class="hero-available">
+                <span class="pulse-dot"></span> Disponible immédiatement
             </div>
         </div>
 
-        <div class="hero-right">
-            <p class="kicker">Seydi Ahmeth Ndiaye</p>
-            <h1>Développeur Full-Stack (Angular / Java / .NET) orienté Cloud & CI/CD</h1>
-            <p class="subtitle">Angular • Java / Spring Boot • .NET • PostgreSQL</p>
-            <p class="summary">
-                Full-Stack developer specialized in Angular, Java/Spring Boot and .NET. PSM I certified | AWS Cloud Practitioner | Azure AZ-900. Co-Founder of VigiTech — SaaS platform deployed on 5 active sites in Trois-Rivières.
+        <div class="hero-content">
+            <p class="hero-kicker">Seydi Ahmeth Ndiaye</p>
+            <h1 class="hero-title">Développeur<br/><span class="accent-text">Full Stack</span><br/>& Analyste BI</h1>
+            <p class="hero-subtitle">Angular · Java / Spring Boot · .NET · Power BI · Microsoft Fabric</p>
+            <p class="hero-summary">
+                Diplômé en génie logiciel (UQTR, 2025). Co-fondateur de VigiTech, plateforme SaaS déployée sur AWS sur 5 sites actifs. Expérience en milieu manufacturier avec Microsoft Fabric et Power BI (Micro Bird). PSM I · AWS CLF-C02 · Azure AZ-900. Ouvert aux postes Full Stack, BI et Analyste-Développeur.
             </p>
-            <div class="cta-row">
-                <a href="docs/CV_SeydiNdiaye_Portfolio.pdf" target="_blank" class="btn btn-primary btn-cta">
+
+            <div class="hero-cta-row">
+                <a href="docs/CV_Seydi_Ndiaye.pdf" target="_blank" class="btn btn-primary">
                     <i class="bi bi-download"></i> Télécharger CV
                 </a>
-                <a href="https://github.com/seydi-dev" target="_blank" class="btn btn-outline-light btn-cta">
+                <a href="https://github.com/seydi-dev" target="_blank" class="btn btn-ghost">
                     <i class="bi bi-github"></i> GitHub
                 </a>
-                <a
-                        href="https://www.linkedin.com/in/seydi-ahmeth-ndiaye-0385271b5"
-                        target="_blank"
-                        class="btn btn-outline-light btn-cta"
-                >
+                <a href="https://www.linkedin.com/in/seydi-ahmeth-ndiaye-0385271b5" target="_blank" class="btn btn-ghost">
                     <i class="bi bi-linkedin"></i> LinkedIn
                 </a>
-
-                <a href="mailto:seydi.ahmeth.ndiaye@uqtr.ca" class="btn btn-outline-light btn-cta">
+                <a href="mailto:amethndiaye16641@gmail.com" class="btn btn-ghost">
                     <i class="bi bi-envelope"></i> Email
                 </a>
             </div>
+
+            <div class="hero-contact-line">
+                <span><i class="bi bi-telephone"></i> 819-996-1288</span>
+                <span><i class="bi bi-geo-alt"></i> Trois-Rivières </span>
+            </div>
         </div>
     </div>
 </section>
 
-<!-- SKILLS -->
+<!-- ============================================================ SKILLS -->
 <section id="skills" class="section">
     <div class="container">
-        <div class="heading">
-            <div class="divider"></div>
+        <div class="section-heading">
             <h2>Compétences techniques</h2>
-            <p class="section-subtitle">Full-Stack • Cloud • DevOps • Data</p>
+            <p class="section-sub">Full Stack · Cloud · DevOps · BI & Data</p>
         </div>
 
-        <div class="row g-4">
+        <div class="skills-grid">
 
-            <!-- Frontend -->
-            <div class="col-lg-6">
-                <div class="card-soft">
-                    <h3 class="card-title">Frontend</h3>
-                    <div class="skill-badges">
-                        <span class="badge-skill">Angular</span>
-                        <span class="badge-skill">React.js</span>
-                        <span class="badge-skill">React Native</span>
-                        <span class="badge-skill">TypeScript</span>
-                        <span class="badge-skill">JavaScript</span>
-                        <span class="badge-skill">HTML5</span>
-                        <span class="badge-skill">CSS3</span>
-                    </div>
+            <div class="skill-card">
+                <div class="skill-card-icon"><i class="bi bi-layout-text-window-reverse"></i></div>
+                <h3>Frontend</h3>
+                <div class="tag-list">
+                    <span class="tag tag-blue">Angular 19</span>
+                    <span class="tag tag-blue">ReactJS</span>
+                    <span class="tag tag-blue">React Native</span>
+                    <span class="tag">TypeScript</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">HTML5</span>
+                    <span class="tag">CSS3</span>
+                    <span class="tag">RxJS</span>
+                    <span class="tag">Chart.js</span>
+                    <span class="tag">D3.js</span>
+                    <span class="tag">ECharts</span>
                 </div>
             </div>
 
-            <!-- Backend -->
-            <div class="col-lg-6">
-                <div class="card-soft">
-                    <h3 class="card-title">Backend</h3>
-                    <div class="skill-badges">
-                        <span class="badge-skill highlight-skill">.NET (C#)</span>
-                        <span class="badge-skill">Java / Spring Boot</span>
-                        <span class="badge-skill">Node.js</span>
-                        <span class="badge-skill">Python</span>
-                        <span class="badge-skill">REST APIs</span>
-                        <span class="badge-skill">Jest</span>
-                        <span class="badge-skill">Cypress</span>
-                    </div>
+            <div class="skill-card">
+                <div class="skill-card-icon"><i class="bi bi-server"></i></div>
+                <h3>Backend</h3>
+                <div class="tag-list">
+                    <span class="tag tag-blue">Java / Spring Boot 3</span>
+                    <span class="tag tag-blue">C# / .NET 8</span>
+                    <span class="tag tag-blue">ASP.NET Core</span>
+                    <span class="tag">REST APIs</span>
+                    <span class="tag">Microservices</span>
+                    <span class="tag">JPA / Hibernate</span>
+                    <span class="tag">JWT · RBAC</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">CQRS</span>
                 </div>
             </div>
 
-            <!-- Databases -->
-            <div class="col-lg-6">
-                <div class="card-soft">
-                    <h3 class="card-title">Bases de données</h3>
-                    <div class="skill-badges">
-                        <span class="badge-skill">PostgreSQL</span>
-                        <span class="badge-skill">SQL Server</span>
-                        <span class="badge-skill">MySQL</span>
-                        <span class="badge-skill">MongoDB</span>
-                        <span class="badge-skill">Firebase</span>
-                        <span class="badge-skill">SQL avancé</span>
-                    </div>
+            <div class="skill-card skill-card--highlight">
+                <div class="skill-card-icon accent"><i class="bi bi-bar-chart-line"></i></div>
+                <h3>BI & Data <span class="badge-new">Micro Bird</span></h3>
+                <div class="tag-list">
+                    <span class="tag tag-accent">Microsoft Fabric</span>
+                    <span class="tag tag-accent">Power BI</span>
+                    <span class="tag tag-accent">DAX</span>
+                    <span class="tag tag-accent">Power Query (M)</span>
+                    <span class="tag tag-accent">PySpark</span>
+                    <span class="tag">Architecture Medallion</span>
+                    <span class="tag">ETL · Dataflows</span>
+                    <span class="tag">Modèles en étoile</span>
+                    <span class="tag">KPI · Reporting</span>
+                    <span class="tag">Power Automate</span>
+                    <span class="tag">SQL (AS400)</span>
                 </div>
             </div>
 
-            <!-- Cloud & DevOps -->
-            <div class="col-lg-6">
-                <div class="card-soft">
-                    <h3 class="card-title">Cloud & DevOps</h3>
-                    <div class="skill-badges">
-                        <span class="badge-skill highlight-skill">Azure (AZ-900)</span>
-                        <span class="badge-skill highlight-skill">AZ-104</span>
-                        <span class="badge-skill highlight-skill">AWS (CLF-C02)</span>
-                        <span class="badge-skill highlight-skill">CI/CD</span>
-                        <span class="badge-skill">Git</span>
-                        <span class="badge-skill">Docker (notions)</span>
-                    </div>
+            <div class="skill-card">
+                <div class="skill-card-icon"><i class="bi bi-database"></i></div>
+                <h3>Bases de données</h3>
+                <div class="tag-list">
+                    <span class="tag tag-blue">PostgreSQL</span>
+                    <span class="tag">SQL Server</span>
+                    <span class="tag">MySQL</span>
+                    <span class="tag">Firebase</span>
+                    <span class="tag">MongoDB</span>
                 </div>
             </div>
 
-            <!-- Tools -->
-            <div class="col-lg-6">
-                <div class="card-soft">
-                    <h3 class="card-title">Outils & Méthodes</h3>
-                    <div class="skill-badges">
-                        <span class="badge-skill">GitHub</span>
-                        <span class="badge-skill">Jira</span>
-                        <span class="badge-skill">PSM I / Agile Scrum</span>
-                        <span class="badge-skill">Excel avancé</span>
-                    </div>
+            <div class="skill-card">
+                <div class="skill-card-icon"><i class="bi bi-cloud-check"></i></div>
+                <h3>Cloud & DevOps</h3>
+                <div class="tag-list">
+                    <span class="tag tag-blue">AWS (EC2, S3)</span>
+                    <span class="tag tag-blue">Azure</span>
+                    <span class="tag">Docker</span>
+                    <span class="tag">GitHub Actions CI/CD</span>
+                    <span class="tag">Git</span>
+                    <span class="tag">Azure DevOps</span>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-card-icon"><i class="bi bi-check2-square"></i></div>
+                <h3>Tests & Méthodes</h3>
+                <div class="tag-list">
+                    <span class="tag">JUnit</span>
+                    <span class="tag">xUnit</span>
+                    <span class="tag">Jest</span>
+                    <span class="tag">Cypress</span>
+                    <span class="tag">TDD</span>
+                    <span class="tag tag-blue">PSM I / Agile Scrum</span>
+                    <span class="tag">Jira · Confluence</span>
                 </div>
             </div>
 
         </div>
     </div>
 </section>
-<!-- EXPERIENCE -->
+
+<!-- ============================================================ EXPERIENCE -->
 <section id="experience" class="section">
     <div class="container">
-        <div class="heading">
-            <div class="divider"></div>
+        <div class="section-heading">
             <h2>Expériences</h2>
-            <p class="section-subtitle">Focus : impact, responsabilités, stack</p>
+            <p class="section-sub">Impact · Responsabilités · Stack</p>
         </div>
 
-        <ul class="timeline">
-            <!-- VigiTech (2024-2026) -->
-            <li>
-                <div class="timeline-badge"><span class="bi-briefcase-fill"></span></div>
-                <div class="timeline-panel-container">
-                    <div class="timeline-panel">
-                        <div class="timeline-heading">
-                            <h3>VigiTech</h3>
-                            <h4>Développeur Web & Mobile Full-Stack</h4>
-                            <p class="text-muted"><span class="bi-clock-fill"></span> 2024–2026</p>
-                        </div>
-                        <div class="timeline-body">
-                            <ul class="bullets">
-                                <li>Développement Android : scan NFC, rondes, parcours d’inspection guidé.</li>
-                                <li>Dashboard web Angular : gestion, visualisation et suivi des données terrain.</li>
-                                <li>Backend Spring Boot + PostgreSQL : APIs REST, modèles métiers, intégration front/back.</li>
-                                <li>Solution utilisée pour optimiser le suivi terrain et la traçabilité des rondes de sécurité.</li>
-                                <li>Déployé sur 5 sites actifs à Trois-Rivières.</li>
-                                <li>Utilisé en production depuis plus d’un an.</li>
-                            </ul>
-                            <p class="stack-line"><strong>Stack :</strong> Android • Angular • Spring Boot • PostgreSQL • NFC</p>
-                        </div>
-                    </div>
-                </div>
-            </li>
+        <div class="timeline">
 
-            <!-- Speedy-Box (2024-2025) -->
-            <li>
-                <div class="timeline-badge"><span class="bi-briefcase-fill"></span></div>
-                <div class="timeline-panel-container-inverted">
-                    <div class="timeline-panel">
-                        <div class="timeline-heading">
-                            <h3>Speedy-Box</h3>
-                            <h4>Développeur Mobile • React Native</h4>
-                            <p class="text-muted"><span class="bi-clock-fill"></span> 2024–2025</p>
-                        </div>
-                        <div class="timeline-body">
-                            <ul class="bullets">
-                                <li>Développement d’écrans mobile React Native (parcours, détails réservation, contact).</li>
-                                <li>Intégration API backend et gestion des données côté app.</li>
-                                <li>Amélioration UI : composants réutilisables, style “card” plus pro.</li>
-                            </ul>
-                            <p class="stack-line"><strong>Stack :</strong> React Native • Spring Boot • PostgreSQL</p>
-                        </div>
+            <!-- VigiTech -->
+            <div class="tl-item">
+                <div class="tl-line"></div>
+                <div class="tl-dot"></div>
+                <div class="tl-card">
+                    <div class="tl-meta">
+                        <span class="tl-company">VigiTech</span>
+                        <span class="tl-date">Janvier 2024 — Présent</span>
                     </div>
+                    <h3 class="tl-role">Co-Fondateur & Développeur Full Stack <span class="tl-tag">SaaS · Production</span></h3>
+                    <ul class="tl-bullets">
+                        <li>Conception, développement et déploiement d'une plateforme SaaS de gestion des rondes de sécurité sur AWS (EC2, S3) avec CI/CD GitHub Actions et Docker.</li>
+                        <li>Architecture Java 17 / Spring Boot 3, REST APIs, microservices, JPA/Hibernate, JWT, RBAC multi-rôles.</li>
+                        <li>Dashboard temps réel avec Chart.js, D3.js et ECharts, visualisation live des rondes, incidents et KPIs sur 5 sites actifs.</li>
+                        <li>Frontend Angular 22 avec signature électronique web intégrée pour validation et téléchargement des rapports.</li>
+                        <li>Tests automatisés (JUnit, Jest, Cypress) et documentation technique complète.</li>
+                        <li>Gestion de projet : sprints, backlog, coordination co-fondateur et clients pilotes (UQTR, 5 sites actifs).</li>
+                    </ul>
+                    <div class="tl-stack">Android · Angular 19 · Spring Boot 3 · PostgreSQL · AWS · Docker · GitHub Actions</div>
                 </div>
-            </li>
+            </div>
 
-            <!-- Micro Bird (Automne 2025) -->
-            <li>
-                <div class="timeline-badge"><span class="bi-briefcase-fill"></span></div>
-                <div class="timeline-panel-container">
-                    <div class="timeline-panel">
-                        <div class="timeline-heading">
-                            <h3>Micro Bird (Canada)</h3>
-                            <h4>Approvisionnement • Analyse & reporting</h4>
-                            <p class="text-muted"><span class="bi-clock-fill"></span> Automne 2025</p>
-                        </div>
-                        <div class="timeline-body">
-                            <ul class="bullets">
-                                <li>Création de tableaux de bord et analyses pour le suivi achats/fournisseurs/KPIs.</li>
-                                <li>Standardisation du reporting pour réduire le temps de suivi manuel.</li>
-                                <li>Collaboration inter-équipes pour fiabiliser les données et clarifier les besoins.</li>
-                            </ul>
-                            <p class="stack-line"><strong>Outils :</strong> Reporting, analyse de données, Excel/BI</p>
-                        </div>
+            <!-- Micro Bird -->
+            <div class="tl-item">
+                <div class="tl-line"></div>
+                <div class="tl-dot tl-dot--accent"></div>
+                <div class="tl-card tl-card--accent">
+                    <div class="tl-meta">
+                        <span class="tl-company">Micro Bird Inc. <span style="font-weight:400;opacity:.7">(manufacturier)</span></span>
+                        <span class="tl-date">Septembre 2025 — Décembre 2025</span>
                     </div>
+                    <h3 class="tl-role">Stagiaire Analyste Données & Solutions TI <span class="tl-tag tl-tag--accent">BI · Fabric</span></h3>
+                    <ul class="tl-bullets">
+                        <li>Développement de solutions ETL et tableaux de bord analytiques avec Microsoft Fabric et Power BI en environnement manufacturier de production.</li>
+                        <li>Conception de modèles dimensionnels (schémas en étoile), dataflows Fabric, modèles sémantiques et mesures DAX pour le département approvisionnement.</li>
+                        <li>Développement de Notebooks PySpark dans Microsoft Fabric pour la transformation et l'analyse des données opérationnelles (connexion SQL sur AS400).</li>
+                        <li>Formulaire Microsoft Forms avec flux Power Automate pour collecte quotidienne de données RH, relié à un tableau de bord Power BI.</li>
+                        <li>Automatisation de tâches manuelles en Python et VBA, réduction d'environ 40 % du temps de traitement.</li>
+                        <li>Collaboration avec les équipes TI, opérations, achats et logistique pour recueillir les besoins et documenter les solutions.</li>
+                    </ul>
+                    <div class="tl-stack">Microsoft Fabric · Power BI · DAX · Power Query (M) · PySpark · Power Automate · Python · VBA · SQL (AS400)</div>
                 </div>
-            </li>
+            </div>
 
-            <!-- UQTR -->
-            <li>
-                <div class="timeline-badge"><span class="bi-briefcase-fill"></span></div>
-                <div class="timeline-panel-container-inverted">
-                    <div class="timeline-panel">
-                        <div class="timeline-heading">
-                            <h3>UQTR</h3>
-                            <h4>Assistant d’enseignement</h4>
-                            <p class="text-muted"><span class="bi-clock-fill"></span> 2024</p>
-                        </div>
-                        <div class="timeline-body">
-                            <ul class="bullets">
-                                <li>Support aux cours de première année en informatique.</li>
-                                <li>Encadrement : dépannages, correction de TP et examens.</li>
-                            </ul>
-                        </div>
+            <!-- Speedy-Box -->
+            <div class="tl-item">
+                <div class="tl-line"></div>
+                <div class="tl-dot"></div>
+                <div class="tl-card">
+                    <div class="tl-meta">
+                        <span class="tl-company">Speedy-Box</span>
+                        <span class="tl-date">Septembre 2025 — Mars 2026</span>
                     </div>
+                    <h3 class="tl-role">Développeur Full Stack Mobile <span class="tl-tag">Projet personnel</span></h3>
+                    <ul class="tl-bullets">
+                        <li>Application de transport de colis : backend Spring Boot 4 avec REST APIs, gestion JWT et rôles multiples.</li>
+                        <li>Frontend React Native Expo Router, navigation par onglets, filtrage temps réel, stockage sécurisé cross-platform.</li>
+                        <li>Architecture propre : DTO, CascadeType, FetchType, résolution de conflits Jackson/Lombok.</li>
+                        <li>Tests unitaires, documentation technique et déploiement via pipeline CI/CD.</li>
+                    </ul>
+                    <div class="tl-stack">React Native · Spring Boot 4 · PostgreSQL · JWT · CI/CD</div>
                 </div>
-            </li>
+            </div>
+
+            <!-- RecruitFlow -->
+            <div class="tl-item">
+                <div class="tl-line"></div>
+                <div class="tl-dot"></div>
+                <div class="tl-card">
+                    <div class="tl-meta">
+                        <span class="tl-company">RecruitFlow</span>
+                        <span class="tl-date">Janvier 2026 — Présent</span>
+                    </div>
+                    <h3 class="tl-role">Développeur Full Stack <span class="tl-tag">Projet personnel</span></h3>
+                    <ul class="tl-bullets">
+                        <li>Plateforme de gestion de recrutement : Angular 19, ASP.NET Core, PostgreSQL, Firebase avec authentification JWT.</li>
+                        <li>Architecture propre : CQRS, DTO, guards, interceptors, RBAC avec plusieurs rôles distincts.</li>
+                        <li>Tests unitaires et d'intégration (xUnit, Jest), pipeline CI/CD complet et documentation technique.</li>
+                    </ul>
+                    <div class="tl-stack">Angular 19 · ASP.NET Core · PostgreSQL · Firebase · xUnit · Jest · Cypress · GitHub Actions</div>
+                </div>
+            </div>
+
+            <!-- UQTR Assistant -->
+            <div class="tl-item">
+                <div class="tl-line"></div>
+                <div class="tl-dot"></div>
+                <div class="tl-card">
+                    <div class="tl-meta">
+                        <span class="tl-company">UQTR</span>
+                        <span class="tl-date">Janvier 2024 — Avril 2025</span>
+                    </div>
+                    <h3 class="tl-role">Assistant Professeur</h3>
+                    <ul class="tl-bullets">
+                        <li>Encadrement de 30+ étudiants par session en génie logiciel : programmation, algorithmes, bases de données, Git.</li>
+                        <li>Rédaction de travaux pratiques, corrections, documentation pédagogique et vulgarisation de concepts techniques.</li>
+                    </ul>
+                </div>
+            </div>
 
             <!-- Promobile -->
-            <li>
-                <div class="timeline-badge"><span class="bi-briefcase-fill"></span></div>
-                <div class="timeline-panel-container">
-                    <div class="timeline-panel">
-                        <div class="timeline-heading">
-                            <h3>Promobile</h3>
-                            <h4>Stage — Analyse de données</h4>
-                            <p class="text-muted"><span class="bi-clock-fill"></span> 2021</p>
-                        </div>
-                        <div class="timeline-body">
-                            <ul class="bullets">
-                                <li>Rapports de ventes et tableaux de bord pour l’équipe marketing.</li>
-                                <li>Analyses et prévisions pour soutenir la prise de décision.</li>
-                            </ul>
-                            <p class="stack-line"><strong>Outils :</strong> Analyse, reporting</p>
-                        </div>
+            <div class="tl-item">
+                <div class="tl-line tl-line--last"></div>
+                <div class="tl-dot"></div>
+                <div class="tl-card">
+                    <div class="tl-meta">
+                        <span class="tl-company">Promobile <span style="font-weight:400;opacity:.7">(télécommunications, Dakar)</span></span>
+                        <span class="tl-date">Janvier 2021 — Juin 2022</span>
                     </div>
+                    <h3 class="tl-role">Stagiaire Analyste BI & Marketing</h3>
+                    <ul class="tl-bullets">
+                        <li>Développement de rapports et tableaux de bord Power BI pour le département marketing.</li>
+                        <li>Segmentation clients, analyse de rétention et stratégies BI pour réduire le churn.</li>
+                        <li>Requêtes SQL sur bases de données volumineuses. Suivi des KPI commerciaux.</li>
+                    </ul>
+                    <div class="tl-stack">Power BI · SQL · Reporting · Analyse de données</div>
                 </div>
-            </li>
-        </ul>
+            </div>
+
+        </div>
     </div>
 </section>
 
-<!-- EDUCATION -->
+<!-- ============================================================ EDUCATION -->
 <section id="education" class="section">
     <div class="container">
-        <div class="heading">
-            <div class="divider"></div>
-            <h2>Éducation</h2>
+        <div class="section-heading">
+            <h2>Formation</h2>
         </div>
-
-        <div class="row g-4">
-            <div class="col-md-6">
-                <div class="education-block">
-                    <h5>2022–2025</h5>
-                    <span class="bi bi-award-fill"></span>
-                    <h3>Université du Québec à Trois-Rivières (UQTR)</h3>
-                    <h4>Baccalauréat en informatique</h4>
-                    <div class="divider thin"></div>
-                    <p>Génie logiciel • Applications mobiles</p>
-                </div>
+        <div class="edu-grid">
+            <div class="edu-card">
+                <div class="edu-year">2022 — 2025</div>
+                <div class="edu-icon"><i class="bi bi-mortarboard-fill"></i></div>
+                <h3>Université du Québec à Trois-Rivières</h3>
+                <h4>Baccalauréat en génie logiciel</h4>
+                <p>Java · Angular · Python · C# · C++ · Bases de données · Machine learning · Systèmes distribués · Tests</p>
             </div>
-
-            <div class="col-md-6">
-                <div class="education-block">
-                    <h5>2019–2021</h5>
-                    <span class="bi bi-award-fill"></span>
-                    <h3>Institut Supérieur d'Informatique</h3>
-                    <h4>Formation Développeur Web</h4>
-                    <div class="divider thin"></div>
-                    <p>Réseaux • Génie logiciel</p>
-                </div>
+            <div class="edu-card">
+                <div class="edu-year">2019 — 2021</div>
+                <div class="edu-icon"><i class="bi bi-mortarboard-fill"></i></div>
+                <h3>Institut Supérieur Privé Polytechnique</h3>
+                <h4>DTS Génie logiciel & Réseaux</h4>
+                <p>Dakar, Sénégal</p>
             </div>
         </div>
     </div>
 </section>
-<!-- CERTIFICATIONS -->
+
+<!-- ============================================================ CERTIFICATIONS -->
 <section id="certifications" class="section">
     <div class="container">
-        <div class="heading">
-            <div class="divider"></div>
+        <div class="section-heading">
             <h2>Certifications</h2>
-            <p class="section-subtitle">Microsoft Azure</p>
         </div>
+        <div class="cert-grid">
 
-        <div class="row g-4 justify-content-center">
-
-            <div class="col-md-6 col-lg-5">
-                <div class="card-soft certification-card">
-                    <h3 class="cert-title">
-                        <i class="bi bi-patch-check-fill"></i>
-                        Microsoft Azure Fundamentals (AZ-900)
-                    </h3>
-                    <a
-                            href="https://learn.microsoft.com/en-ca/users/ndiayeseydiahmeth-3905/credentials/384aa7d209cb6786"
-                            target="_blank"
-                            class="btn btn-primary btn-cta mt-3"
-                    >
-                        Voir le credential officiel
-                    </a>
+            <div class="cert-card">
+                <div class="cert-logo cert-logo--aws"><i class="bi bi-cloud-fill"></i></div>
+                <div class="cert-body">
+                    <h3>AWS Certified Cloud Practitioner</h3>
+                    <p>CLF-C02 · 2026</p>
+                    <a href="https://www.credly.com/badges/d240f2cb-5588-4f9f-98ba-078f45dd775e" target="_blank" class="cert-link">Voir le credential <i class="bi bi-arrow-up-right"></i></a>
                 </div>
             </div>
 
-            <div class="col-md-6 col-lg-5">
-                <div class="card-soft certification-card">
-                    <h3 class="cert-title">
-                        <i class="bi bi-cloud-check"></i>
-                        Microsoft Azure Administrator (AZ-104)
-                    </h3>
-                    <p class="cert-status success">en cours</p>
+            <div class="cert-card">
+                <div class="cert-logo cert-logo--scrum"><i class="bi bi-kanban-fill"></i></div>
+                <div class="cert-body">
+                    <h3>PSM I — Professional Scrum Master</h3>
+                    <p>Scrum.org · 2026</p>
+                    <a href="https://www.credly.com/earner/earned/badge/3f36c8ee-b6de-4c1a-abc6-1faa764a3319" target="_blank" class="cert-link">Voir le credential <i class="bi bi-arrow-up-right"></i></a>
                 </div>
             </div>
 
-            <div class="col-md-6 col-lg-5">
-                <div class="card-soft certification-card">
-                    <h3 class="cert-title">
-                        <i class="bi bi-kanban-fill"></i>
-                        PSM I — Professional Scrum Master I
-                    </h3>
-                    <a
-                            href="https://www.credly.com/earner/earned/badge/3f36c8ee-b6de-4c1a-abc6-1faa764a3319"
-                            target="_blank"
-                            class="btn btn-primary btn-cta mt-3"
-                    >
-                        Voir le credential officiel
-                    </a>
+            <div class="cert-card">
+                <div class="cert-logo cert-logo--azure"><i class="bi bi-cloud-check-fill"></i></div>
+                <div class="cert-body">
+                    <h3>Microsoft Azure Fundamentals</h3>
+                    <p>AZ-900 · 2025</p>
+                    <a href="https://learn.microsoft.com/en-ca/users/ndiayeseydiahmeth-3905/credentials/384aa7d209cb6786" target="_blank" class="cert-link">Voir le credential <i class="bi bi-arrow-up-right"></i></a>
                 </div>
             </div>
 
-            <div class="col-md-6 col-lg-5">
-                <div class="card-soft certification-card">
-                    <h3 class="cert-title">
-                        <i class="bi bi-cloud-fill"></i>
-                        AWS Certified Cloud Practitioner (CLF-C02)
-                    </h3>
-                    <a
-                            href="https://www.credly.com/badges/d240f2cb-5588-4f9f-98ba-078f45dd775e"
-                            target="_blank"
-                            class="btn btn-primary btn-cta mt-3"
-                    >
-                        Voir le credential officiel
-                    </a>
+            <div class="cert-card">
+                <div class="cert-logo cert-logo--fabric"><i class="bi bi-diagram-3-fill"></i></div>
+                <div class="cert-body">
+                    <h3>Microsoft Fabric</h3>
+                    <p>Certificat Udemy · 2025</p>
+                    <span class="cert-badge-done">Complété</span>
+                </div>
+            </div>
+
+            <div class="cert-card cert-card--inprogress">
+                <div class="cert-logo cert-logo--azure"><i class="bi bi-gear-fill"></i></div>
+                <div class="cert-body">
+                    <h3>Microsoft Azure Administrator</h3>
+                    <p>AZ-104 · En cours de préparation</p>
+                    <span class="cert-badge-progress">En cours</span>
                 </div>
             </div>
 
@@ -423,184 +401,199 @@
     </div>
 </section>
 
-<!-- PROJECTS / PORTFOLIO -->
-<section class="portfolio section" id="portfolio">
+<!-- ============================================================ PROJECTS -->
+<section id="portfolio" class="section">
     <div class="container">
-        <div class="heading">
-            <div class="divider"></div>
+        <div class="section-heading">
             <h2>Projets</h2>
-            <p class="section-subtitle">Applications & Dashboards développés</p>
+            <p class="section-sub">Applications & Dashboards développés</p>
         </div>
 
-        <div class="portfolio-container">
+        <div class="portfolio-layout">
 
-            <!-- LEFT: project details -->
-            <div class="portfolio-box">
+            <!-- LEFT: project info -->
+            <div class="pf-info-col">
 
-                <!-- 01 VigiTech -->
-                <div class="portfolio-detail active">
-                    <p class="numb">01</p>
-                    <h3>VigiTech — Application NFC & Dashboard Analytique</h3>
-
-                    <ul class="bullets">
+                <div class="pf-detail active" data-index="0">
+                    <span class="pf-num">01</span>
+                    <h3>VigiTech — SaaS Sécurité</h3>
+                    <p class="pf-desc">Plateforme SaaS complète de gestion des rondes de sécurité, déployée sur AWS sur 5 sites actifs depuis janvier 2024. Dashboard temps réel, scan NFC Android, signature électronique web.</p>
+                    <ul class="pf-bullets">
                         <li>Application mobile Android avec scan NFC pour traçabilité des rondes</li>
-                        <li>Parcours d’inspection guidé pour sécurisation terrain</li>
-                        <li>Dashboard Angular pour analyse et suivi des indicateurs</li>
+                        <li>Dashboard Angular en temps réel — visualisation des incidents et KPIs</li>
+                        <li>Backend Spring Boot 3 + JWT + RBAC multi-rôles</li>
+                        <li>Déployé sur AWS (EC2, S3) avec CI/CD GitHub Actions + Docker</li>
                     </ul>
-
-                    <div class="tech-badges">
-                        <span class="badge-skill badge-skill--dark">Android</span>
-                        <span class="badge-skill badge-skill--dark">Angular</span>
-                        <span class="badge-skill badge-skill--dark">Spring Boot</span>
-                        <span class="badge-skill badge-skill--dark">PostgreSQL</span>
+                    <div class="pf-tags">
+                        <span class="tag tag-blue">Angular 19</span>
+                        <span class="tag tag-blue">Spring Boot 3</span>
+                        <span class="tag">Android · NFC</span>
+                        <span class="tag">PostgreSQL</span>
+                        <span class="tag">AWS</span>
+                        <span class="tag">Docker</span>
                     </div>
                 </div>
 
-                <!-- 02 Micro Bird – Dashboards & Data -->
-                <div class="portfolio-detail">
-                    <p class="numb">02</p>
-                    <h3>Micro Bird — Dashboards & Analyse de données</h3>
-
-                    <ul class="bullets">
-                        <li>Création de tableaux de bord stratégiques pour le suivi fournisseurs, achats et logistique.</li>
-                        <li>Conception de KPI métier : back orders, performance fournisseurs, inventaire, ventes.</li>
-                        <li>Optimisation des requêtes SQL et structuration des données pour reporting.</li>
-                        <li>Collaboration avec équipes achats et opérations pour fiabiliser les indicateurs.</li>
+                <div class="pf-detail" data-index="1">
+                    <span class="pf-num">02</span>
+                    <h3>Micro Bird — Dashboards BI</h3>
+                    <p class="pf-desc">Tableaux de bord analytiques et solutions ETL développés en contexte manufacturier réel chez Micro Bird Inc. (fabricant d'autobus scolaires), avec Microsoft Fabric et Power BI.</p>
+                    <ul class="pf-bullets">
+                        <li>Architecture Fabric : Lakehouse, Notebooks PySpark, Delta tables, Dataflows</li>
+                        <li>Modèles en étoile, mesures DAX avancées, Power Query (M)</li>
+                        <li>KPI métier : back orders, performance fournisseurs, inventaire, ventes</li>
+                        <li>Flux Power Automate + Microsoft Forms relié à Power BI</li>
+                        <li>Automatisations Python & VBA — réduction ~40 % du temps manuel</li>
                     </ul>
-
-                    <div class="tech-badges">
-                        <span class="badge-skill badge-skill--dark">SQL Server</span>
-                        <span class="badge-skill badge-skill--dark">SQL avancé</span>
-                        <span class="badge-skill badge-skill--dark">Excel avancé</span>
-                        <span class="badge-skill badge-skill--dark">Reporting</span>
-                        <span class="badge-skill badge-skill--dark">KPI</span>
+                    <div class="pf-tags">
+                        <span class="tag tag-accent">Microsoft Fabric</span>
+                        <span class="tag tag-accent">Power BI</span>
+                        <span class="tag tag-accent">DAX</span>
+                        <span class="tag tag-accent">PySpark</span>
+                        <span class="tag">Power Automate</span>
+                        <span class="tag">SQL (AS400)</span>
                     </div>
                 </div>
 
-                <!-- 03 Jeux -->
-                <div class="portfolio-detail">
-                    <p class="numb">03</p>
-                    <h3>Jeux JavaScript</h3>
-
-                    <ul class="bullets">
-                        <li>Jeu du pendu responsive</li>
-                        <li>Snake moderne avec gestion score</li>
+                <div class="pf-detail" data-index="2">
+                    <span class="pf-num">03</span>
+                    <h3>RecruitFlow — Gestion du recrutement</h3>
+                    <p class="pf-desc">Plateforme de gestion du recrutement avec workflow complet candidats, postes et suivi des étapes. Architecture propre CQRS, tests automatisés et CI/CD.</p>
+                    <ul class="pf-bullets">
+                        <li>Interface Angular 19 connectée à une API ASP.NET Core</li>
+                        <li>Architecture CQRS, guards, interceptors, RBAC multi-rôles</li>
+                        <li>Tests unitaires et end-to-end (xUnit, Jest, Cypress)</li>
+                        <li>CI/CD GitHub Actions + intégration Firebase</li>
                     </ul>
-
-                    <div class="tech-badges">
-                        <span class="badge-skill badge-skill--dark">JavaScript</span>
-                        <span class="badge-skill badge-skill--dark">HTML</span>
-                        <span class="badge-skill badge-skill--dark">CSS</span>
+                    <div class="pf-tags">
+                        <span class="tag tag-blue">Angular 19</span>
+                        <span class="tag tag-blue">ASP.NET Core</span>
+                        <span class="tag">PostgreSQL</span>
+                        <span class="tag">Firebase</span>
+                        <span class="tag">xUnit · Jest</span>
+                        <span class="tag">GitHub Actions</span>
                     </div>
-                    <div class="project-actions">
-                        <a href="https://seydi-dev.github.io/pendu/"
-                           target="_blank"
-                           class="btn btn-primary btn-sm">
-                            <i class="bx bx-play-circle"></i> Live Demo Pendu
+                    <div class="pf-links">
+                        <a href="https://github.com/seydi-dev/recruitflow" target="_blank" class="btn btn-ghost btn-sm">
+                            <i class="bi bi-github"></i> GitHub
                         </a>
-                    </div>
-                    <div class="project-actions">
-                        <a href="https://seydi-dev.github.io/serpent/"
-                           target="_blank"
-                           class="btn btn-primary btn-sm">
-                            <i class="bx bx-play-circle"></i> Live Demo Snake
-                        </a>
-                    </div>
-                </div>
-                <div class="portfolio-detail">
-                    <p class="numb">04</p>
-                    <h3>RecruitFlow — Plateforme de gestion du recrutement</h3>
-
-                    <ul class="bullets">
-                        <li>Plateforme de gestion du recrutement avec workflow candidats, postes et suivi des étapes.</li>
-                        <li>Interface Angular 19 connectée à une API ASP.NET Core.</li>
-                        <li>Tests unitaires et end-to-end avec Jest et Cypress.</li>
-                        <li>CI/CD avec GitHub Actions et intégration Firebase.</li>
-                    </ul>
-
-                    <div class="tech-badges">
-                        <span class="badge-skill badge-skill--dark">Angular 19</span>
-                        <span class="badge-skill badge-skill--dark">ASP.NET Core</span>
-                        <span class="badge-skill badge-skill--dark">PostgreSQL</span>
-                        <span class="badge-skill badge-skill--dark">Jest</span>
-                        <span class="badge-skill badge-skill--dark">Cypress</span>
-                        <span class="badge-skill badge-skill--dark">GitHub Actions</span>
-                        <span class="badge-skill badge-skill--dark">Firebase</span>
-                    </div>
-
-                    <div class="project-actions">
-                        <a href="https://github.com/seydi-dev/recruitflow" target="_blank" class="btn btn-primary btn-sm">
-                            <i class="bx bxl-github"></i> GitHub
-                        </a>
-                        <a href="https://recruit-flow-front.web.app"
-                           target="_blank"
-                           class="btn btn-primary btn-sm">
-                            <i class="bx bx-play-circle"></i> Live Demo
+                        <a href="https://recruit-flow-front.web.app" target="_blank" class="btn btn-primary btn-sm">
+                            <i class="bi bi-play-circle"></i> Live Demo
                         </a>
                     </div>
                 </div>
-            </div>
 
-            <!-- RIGHT: image grid slider -->
-            <div class="portfolio-box">
-
-                <div class="portfolio-carousel">
-                    <div class="img-slide">
-
-                        <!-- SLIDE 1 VigiTech -->
-                        <div class="img-item project-grid">
-                            <img src="images/vigitech/vigitech1.png" alt="VigiTech Mobile NFC" />
-                            <img src="images/vigitech/vigitech2.png" alt="VigiTech Inspection" />
-                            <img src="images/vigitech/vigitech5.png" alt="VigiTech Dashboard" />
-                            <img src="images/vigitech/vigitech6.png" alt="VigiTech Reports" />
-                        </div>
-
-                        <!-- SLIDE 2 SpeedyBox -->
-                        <div class="img-item project-grid">
-                            <img src="images/microbird/microbird-1.png" class="web" alt="microbird dahsboard" />
-                            <img src="images/microbird/microbird-2.png" class="web"  alt="microbird dahsboard" />
-                            <img src="images/microbird/microbird-3.png" class="mobile"  alt="microbird dahsboard" />
-                            <img src="images/microbird/microbird-4.png" class="mobile"  alt="microbird dahsboard" />
-                        </div>
-
-                        <!-- SLIDE 3 Jeux -->
-                        <div class="img-item project-grid">
-                            <img src="images/games/pendu.png" alt="Jeu du Pendu" />
-                            <img src="images/games/serpent.png" alt="Jeu Snake" />
-                        </div>
-
-
-                        <div class="img-item project-grid">
-                            <img src="images/recruitflow/recruitflow-1.png" alt="RecruitFlow dashboard" class="web" />
-                            <img src="images/recruitflow/recruitflow-2.png" alt="RecruitFlow candidats" class="web" />
-                            <img src="images/recruitflow/recruitflow-3.png" alt="RecruitFlow pipeline" class="web" />
-                            <img src="images/recruitflow/recruitflow-4.png" alt="RecruitFlow tests CI/CD" class="web" />
-                        </div>
+                <div class="pf-detail" data-index="3">
+                    <span class="pf-num">04</span>
+                    <h3>Projet Fabric Medallion — Turbines éoliennes</h3>
+                    <p class="pf-desc">Implémentation complète d'une architecture Medallion Bronze/Silver/Gold dans Microsoft Fabric avec un dataset de production d'énergie éolienne. Certifié Udemy + Azure.</p>
+                    <ul class="pf-bullets">
+                        <li>Architecture Bronze / Silver / Gold dans Microsoft Fabric Lakehouse</li>
+                        <li>Notebooks PySpark pour transformation et Delta tables</li>
+                        <li>Schéma en étoile : dim_date, dim_time, dim_turbine, dim_operational_status, fact_wind_power</li>
+                        <li>Modèle sémantique publié et rapport Power BI Service déployé</li>
+                    </ul>
+                    <div class="pf-tags">
+                        <span class="tag tag-accent">Microsoft Fabric</span>
+                        <span class="tag tag-accent">PySpark</span>
+                        <span class="tag tag-accent">Delta Tables</span>
+                        <span class="tag tag-accent">Power BI Service</span>
+                        <span class="tag">Architecture Medallion</span>
                     </div>
-                </div>
-
-                <div class="navigation">
-                    <button class="arrow-left disabled">
-                        <i class="bx bxs-chevron-left"></i>
-                    </button>
-                    <button class="arrow-right">
-                        <i class="bx bx-chevron-right"></i>
-                    </button>
                 </div>
 
             </div>
+
+            <!-- RIGHT: image carousel -->
+            <div class="pf-visual-col">
+                <div class="pf-carousel">
+                    <div class="pf-slides" id="pfSlides">
+
+                        <!-- Slide 0: VigiTech -->
+                        <div class="pf-slide">
+                            <div class="img-grid-4">
+                                <img src="images/vigitech/vigitech1.png" alt="VigiTech Mobile NFC" />
+                                <img src="images/vigitech/vigitech2.png" alt="VigiTech Inspection" />
+                                <img src="images/vigitech/vigitech5.png" alt="VigiTech Dashboard" />
+                                <img src="images/vigitech/vigitech6.png" alt="VigiTech Reports" />
+                            </div>
+                        </div>
+
+                        <!-- Slide 1: Micro Bird -->
+                        <div class="pf-slide">
+                            <div class="img-grid-4">
+                                <img src="images/microbird/microbird-1.png" alt="Micro Bird Dashboard 1" />
+                                <img src="images/microbird/microbird-2.png" alt="Micro Bird Dashboard 2" />
+                                <img src="images/microbird/microbird-3.png" alt="Micro Bird Dashboard 3" />
+                                <img src="images/microbird/microbird-4.png" alt="Micro Bird Dashboard 4" />
+                            </div>
+                        </div>
+
+                        <!-- Slide 2: RecruitFlow -->
+                        <div class="pf-slide">
+                            <div class="img-grid-4">
+                                <img src="images/recruitflow/recruitflow-1.png" alt="RecruitFlow dashboard" />
+                                <img src="images/recruitflow/recruitflow-2.png" alt="RecruitFlow candidats" />
+                                <img src="images/recruitflow/recruitflow-3.png" alt="RecruitFlow pipeline" />
+                                <img src="images/recruitflow/recruitflow-4.png" alt="RecruitFlow CI/CD" />
+                            </div>
+                        </div>
+
+                        <!-- Slide 3: Fabric Medallion placeholder -->
+                        <div class="pf-slide">
+                            <div class="fabric-placeholder">
+                                <i class="bi bi-diagram-3-fill"></i>
+                                <p>Architecture Medallion</p>
+                                <p class="fabric-sub">Bronze → Silver → Gold · Microsoft Fabric Lakehouse</p>
+                                <div class="fabric-layers">
+                                    <span class="fab-layer fab-bronze">Bronze</span>
+                                    <span class="fab-arrow"><i class="bi bi-arrow-right"></i></span>
+                                    <span class="fab-layer fab-silver">Silver</span>
+                                    <span class="fab-arrow"><i class="bi bi-arrow-right"></i></span>
+                                    <span class="fab-layer fab-gold">Gold</span>
+                                </div>
+                                <p class="fabric-stack">PySpark · Delta Tables · Power BI Service</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Nav dots + arrows -->
+                <div class="pf-nav">
+                    <button class="pf-arrow" id="pfPrev" aria-label="Précédent">
+                        <i class="bi bi-chevron-left"></i>
+                    </button>
+                    <div class="pf-dots" id="pfDots"></div>
+                    <button class="pf-arrow" id="pfNext" aria-label="Suivant">
+                        <i class="bi bi-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
         </div>
     </div>
 </section>
-<!-- FOOTER -->
-<footer class="text-center">
-    <a href="#about" class="to-top" aria-label="Retour en haut">
-        <span class="bi bi-chevron-up"></span>
-    </a>
-    <div class="container">
-        <p class="muted mb-0">© <span id="year"></span> Seydi Ahmeth Ndiaye — Portfolio</p>
+
+<!-- ============================================================ FOOTER -->
+<footer>
+    <div class="container footer-inner">
+        <div class="footer-left">
+            <span class="footer-brand">Seydi Ahmeth Ndiaye</span>
+            <span class="footer-tagline">Développeur Full Stack & Analyste BI · Trois-Rivières, QC</span>
+        </div>
+        <div class="footer-right">
+            <a href="mailto:amethndiaye16641@gmail.com" aria-label="Email"><i class="bi bi-envelope"></i></a>
+            <a href="https://github.com/seydi-dev" target="_blank" aria-label="GitHub"><i class="bi bi-github"></i></a>
+            <a href="https://www.linkedin.com/in/seydi-ahmeth-ndiaye-0385271b5" target="_blank" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        </div>
     </div>
+    <p class="footer-copy">© <span id="year"></span> Seydi Ahmeth Ndiaye</p>
 </footer>
+
+<a href="#about" class="to-top" id="toTop" aria-label="Retour en haut">
+    <i class="bi bi-chevron-up"></i>
+</a>
 
 <script src="script/script.js"></script>
 </body>
