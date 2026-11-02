@@ -728,35 +728,50 @@ body {
 }
 
 /* ============================================================ PORTFOLIO */
-.portfolio-layout {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 48px;
-    align-items: start;
+.pf-list {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
 }
 
-/* Info side */
-.pf-info-col { position: relative; }
+.pf-card {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+    gap: 40px;
+    align-items: start;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 32px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
 
-.pf-detail { display: none; }
-.pf-detail.active { display: block; }
+.pf-card:hover {
+    border-color: var(--border-hi);
+    box-shadow: var(--shadow);
+}
 
+/* Text side */
 .pf-num {
     font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 5rem;
+    font-size: 3.5rem;
     font-weight: 800;
     -webkit-text-stroke: 1px rgba(255,255,255,0.2);
     color: transparent;
     line-height: 1;
-    margin-bottom: 4px;
+    margin-bottom: 8px;
     display: block;
 }
 
-.pf-info-col h3 {
+.pf-text h3 {
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 1.5rem;
     font-weight: 800;
     margin-bottom: 10px;
+}
+
+.pf-status {
+    margin-bottom: 12px;
 }
 
 .pf-desc {
@@ -799,50 +814,76 @@ body {
     flex-wrap: wrap;
 }
 
+.pf-demo {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--muted);
+}
+
 /* Visual side */
-.pf-carousel {
-    background: rgba(0,0,0,0.2);
-    border-radius: var(--radius);
-    border: 1px solid var(--border);
-    overflow: hidden;
-    height: 420px;
-}
-
-.pf-slides {
+.pf-media {
     display: flex;
-    height: 100%;
-    transition: transform 0.5s cubic-bezier(0.4,0,0.2,1);
+    flex-direction: column;
+    gap: 12px;
+    min-width: 0;
 }
 
-.pf-slide {
-    flex: 0 0 100%;
-    height: 100%;
+.pf-main,
+.pf-thumb {
+    display: block;
+    overflow: hidden;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border);
+    background: rgba(0,0,0,0.2);
 }
 
-.img-grid-4 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    padding: 14px;
-    height: 100%;
-}
-
-.img-grid-4 img {
+.pf-main img,
+.pf-thumb img {
+    display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 10px;
-    border: 1px solid var(--border);
+    object-position: top left;
     transition: transform 0.3s ease;
 }
 
-.img-grid-4 img:hover {
+.pf-main img { aspect-ratio: 16 / 10; }
+
+.pf-main:hover img,
+.pf-thumb:hover img {
     transform: scale(1.03);
 }
 
-/* Fabric placeholder slide */
+.pf-thumbs {
+    display: flex;
+    gap: 12px;
+}
+
+.pf-thumb {
+    flex: 1 1 0;
+    min-width: 0;
+    aspect-ratio: 16 / 10;
+}
+
+.pf-thumb--phone {
+    flex: 0 0 120px;
+    aspect-ratio: 9 / 20;
+    border-radius: 16px;
+    border: 3px solid rgba(255,255,255,0.14);
+}
+
+.pf-caption {
+    font-size: 0.78rem;
+    color: var(--muted);
+    font-style: italic;
+}
+
+/* Placeholder visual */
 .fabric-placeholder {
-    height: 100%;
+    min-height: 340px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -850,6 +891,9 @@ body {
     gap: 16px;
     padding: 32px;
     text-align: center;
+    background: rgba(0,0,0,0.2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
 }
 
 .fabric-placeholder > i {
@@ -873,6 +917,8 @@ body {
 
 .fabric-layers {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
     gap: 10px;
 }
@@ -888,6 +934,9 @@ body {
 .fab-silver { background: rgba(148,163,184,0.15); border: 1px solid rgba(148,163,184,0.3); color: #cbd5e1; }
 .fab-gold   { background: rgba(245,158,11,0.15); border: 1px solid rgba(245,158,11,0.3); color: #fbbf24; }
 
+.rag-step        { background: rgba(59,130,246,0.12); border: 1px solid rgba(59,130,246,0.25); color: #93c5fd; }
+.rag-step--final { background: rgba(6,182,212,0.12); border-color: rgba(6,182,212,0.3); color: #67e8f9; }
+
 .fab-arrow { color: var(--muted); font-size: 0.9rem; }
 
 .fabric-stack {
@@ -895,60 +944,36 @@ body {
     color: var(--muted) !important;
 }
 
-/* Nav dots + arrows */
-.pf-nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 14px;
-    margin-top: 18px;
-}
-
-.pf-arrow {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 42px;
-    height: 42px;
-    border-radius: 12px;
-    background: rgba(255,255,255,0.06);
+/* ============================================================ CONTACT */
+.contact-box {
+    max-width: 720px;
+    margin: 0 auto;
+    text-align: center;
+    background: var(--card);
     border: 1px solid var(--border);
-    color: rgba(232,236,244,0.9);
-    cursor: pointer;
-    font-size: 1rem;
-    transition: all 0.2s;
+    border-radius: var(--radius);
+    padding: 48px 32px;
 }
 
-.pf-arrow:hover {
-    background: rgba(255,255,255,0.1);
-    border-color: var(--border-hi);
+.contact-box h2 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    margin-bottom: 12px;
 }
 
-.pf-arrow:disabled {
-    opacity: 0.35;
-    cursor: not-allowed;
+.contact-box p {
+    color: var(--muted);
+    max-width: 52ch;
+    margin: 0 auto 28px;
 }
 
-.pf-dots {
+.contact-actions {
     display: flex;
-    gap: 8px;
-}
-
-.pf-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: rgba(255,255,255,0.2);
-    border: none;
-    cursor: pointer;
-    transition: all 0.2s;
-    padding: 0;
-}
-
-.pf-dot.active {
-    background: var(--accent);
-    width: 22px;
-    border-radius: 4px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
 }
 
 /* ============================================================ FOOTER */
@@ -1089,9 +1114,15 @@ footer {
         grid-template-columns: 1fr;
     }
 
-    .portfolio-layout {
-        grid-template-columns: 1fr;
+    .pf-card {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 24px;
+        padding: 22px 18px;
     }
+    .pf-thumb--phone { flex-basis: 96px; }
+    .fabric-placeholder { min-height: 0; padding: 28px 16px; }
+    .contact-box { padding: 36px 20px; }
+    .contact-box h2 { font-size: 1.6rem; }
 
     .timeline { padding-left: 12px; }
     .tl-item { padding-left: 28px; }
